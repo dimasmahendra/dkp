@@ -18,6 +18,43 @@ if (isset($pengisian_pss)) {
 ?>
     <div class="container-fluid">
         <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>
+                            Export PIRT
+                        </h2>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <form action="<?php echo base_url(); ?>Cetak/exportPss" enctype="multipart/form-data" method="post">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label>Tanggal Awal</label>
+                                            <input class="form-control" type="text" id="tanggal_awal" name="tanggal_awal" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label>Tanggal Akhir</label>
+                                            <input class="form-control" type="text" id="tanggal_akhir" name="tanggal_akhir" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <button type="submit" class="btn bg-primary waves-effect">
+                                        <i class="material-icons">import_export</i>
+                                        <span style="color:#fff;">Export</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="card">
                     <div class="header">

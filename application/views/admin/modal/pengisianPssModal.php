@@ -8,7 +8,7 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
             </div>
-            <form action="<?php echo base_url(); ?>Layananpublik/inputPenilaianPss" enctype="multipart/form-data" method="post">
+            <form action="<?php echo base_url(); ?>Pss/inputPenilaianPss" enctype="multipart/form-data" method="post">
             <div class="modal-body">
                 <div class="col-sm-12">
                 	<input type="hidden" name="layanan_pss_detail_id" id="layanan_pss_detail_id" value="">

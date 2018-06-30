@@ -71,5 +71,16 @@ Class Layanan_model extends CI_Model
             }
         }
     }  
+
+    function getKontak()
+    {        
+        $this->db->select('*');
+        $this->db->from('pemohon_pirt');
+        $this->db->where('status', 'Sudah Terverifikasi');
+        $this->db->where('no_pirt is NOT NULL', NULL, FALSE);
+        $query = $this->db->get();
+        $result  = $query->result_array();
+        return $result;    
+    }
 }
 ?>

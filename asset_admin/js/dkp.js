@@ -152,3 +152,26 @@ $(document).ready(function() {
         });
     });
 });
+
+$('.input-pss').click(function( event ){
+    event.preventDefault();
+    var id = $(this).data('id');
+    var parameter = $(this).data('parameter');
+    var hasil = $(this).data('hasil');
+    var status = $(this).data('status');
+    if (id) {
+        $('#layanan_pss_detail_id').val(id);
+        $('#parameter_pengisian').val(parameter);
+        if (hasil) {
+            $('input[name=hasil_pengisian][value="' + hasil + '"]').prop('checked', true);
+            $('input[name=status_pengisian][value="' + status + '"]').prop('checked', true);    
+        }
+        else {
+            $('input[name=hasil_pengisian][value="Negatif"]').prop('checked', true);
+            $('input[name=status_pengisian][value="Tidak Tersertifikasi"]').prop('checked', true);   
+        }        
+    }
+    else{
+        alert('Data tidak ditemukan !!!');
+    }
+});

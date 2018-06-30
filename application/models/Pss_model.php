@@ -28,6 +28,16 @@ Class Pss_model extends CI_Model
         return $result;    
     }
 
+    function getFormpss()
+    {        
+        $this->db->select('*, layanan_pss_detail.id');
+        $this->db->from('layanan_pss_detail');
+        $this->db->join('layanan_pss', 'layanan_pss_detail.id = layanan_pss.layanan_pss_detail_id', 'left'); 
+        $query = $this->db->get();
+        $result  = $query->result_array();
+        return $result;    
+    }
+
     function insertPenilaianpss($insert, $status)
     {
         $this->db->where('layanan_pss_detail_id', $insert['layanan_pss_detail_id']);

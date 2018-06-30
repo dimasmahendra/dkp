@@ -6,34 +6,18 @@
         $('#sakura-table').DataTable();
     } );
 
-    $('.input-pss').click(function(){
-        var id = $(this).data('id');
-        var parameter = $(this).data('parameter');
-        var hasil = $(this).data('hasil');
-        var status = $(this).data('status');
-        if (id) {
-            $('#layanan_pss_detail_id').val(id);
-            $('#parameter_pengisian').val(parameter);
-            $("input[name=hasil_pengisian][value=" + hasil + "]").prop('checked', true);
-            $("input[name=status_pengisian][value=" + status + "]").prop('checked', true);
-        }
-        else{
-            alert('Data tidak ditemukan !!!');
+    jQuery('.validatedForm').validate({
+        rules : {
+            password_pengguna : {
+                minlength : 5
+            },
+            password_pengguna_confirm : {
+                minlength : 5,
+                equalTo : "#password_pengguna"
+            }
         }
     });
 
-    jQuery('.validatedForm').validate({
-            rules : {
-                password_pengguna : {
-                    minlength : 5
-                },
-                password_pengguna_confirm : {
-                    minlength : 5,
-                    equalTo : "#password_pengguna"
-                }
-            }
-        });
-
-        jQuery.extend(jQuery.validator.messages, {
-            equalTo: "Password yang anda masukkan tidak sama."
-        });
+    jQuery.extend(jQuery.validator.messages, {
+        equalTo: "Password yang anda masukkan tidak sama."
+    });

@@ -79,5 +79,31 @@ class Cetak extends CI_Controller {
             }
         exit;
     }
+
+    public function exportPss()
+    {    
+        $insert = array(
+            'tanggal_awal'  => date("Y-m-d", strtotime($this->input->post('tanggal_awal'))),
+            'tanggal_akhir'  => date("Y-m-d", strtotime($this->input->post('tanggal_akhir')))
+        );
+        $data = $this->Cetak_model->getExportPSS($insert);
+        // file name for download
+        $fileName = "export_PSS" . date('Ymd') . ".xls";        
+        // headers for download
+        header("Content-Disposition: attachment; filename=\"$fileName\"");
+        header("Content-Type: application/vnd.ms-excel");
+        
+        $heading = false;
+        if(!empty($data))
+            foreach($data as $row) {
+                if(!$heading) {
+                // display field/column names as a first row
+                    echo implode("\t", array_keys($row)) . "\n";
+                    $heading = true;
+                }
+                echo implode("\t", array_values($row)) . "\n";
+            }
+        exit;
+    }
 }
 ?>

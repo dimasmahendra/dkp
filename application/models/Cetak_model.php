@@ -36,5 +36,16 @@ Class Cetak_model extends CI_Model
         $data = $q->result_array();
         return $data;
     }
+
+    function getExportPSS($insert)
+    {
+        $this->db->from('layanan_pss_detail');
+        $this->db->join('layanan_pss', 'layanan_pss_detail.id = layanan_pss.layanan_pss_detail_id', 'left'); 
+        $this->db->where('layanan_pss_detail.updated_at >=', $insert['tanggal_awal']);
+        $this->db->where('layanan_pss_detail.updated_at <=', $insert['tanggal_akhir']);
+        $q = $this->db->get();
+        $data = $q->result_array();
+        return $data;
+    }
 }
 ?>

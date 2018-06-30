@@ -10,6 +10,16 @@ class Pss extends CI_Controller {
         $this->load->model(array('Home_model', 'Pss_model'));
     }
 
+    public function index()
+    {
+        $session_data = $this->session->userdata('logged_in');
+        $data['report'] = $this->Pss_model->getFormpss();
+        $data['pengisian_pss'] = $this->load->view('admin/modal/pengisianPssModal', '', TRUE);
+        $this->load->view('admin/viewHeaderAdmin', $session_data);
+        $this->load->view('admin/pss/viewListPSS', $data);
+        $this->load->view('admin/viewFooterAdmin.php');
+    }
+
     public function daftarPSS()
     {
         $session_data = $this->session->userdata('logged_in');
@@ -64,6 +74,24 @@ class Pss extends CI_Controller {
         else {          
             $this->session->set_flashdata('error', 'Ubah Permohonan Pedagang Siap Saji Gagal');
             redirect('Pss/daftarPSS', 'refresh');
+        }
+    }
+
+    public function inputPenilaianPss()
+    {
+        $insert = array(
+            'layanan_pss_detail_id'   => $this->input->post('layanan_pss_detail_id'),
+            'parameter'               => $this->input->post('parameter_pengisian'),
+            'hasil'                   => $this->input->post('hasil_pengisian')
+        );
+        $result = $this->Pss_model->insertPenilaianpss($insert, $this->input->post('status_pengisian'));
+        if ($result) {
+            $this->session->set_flashdata('message', 'Perubahan Form Pedagang Siap Saji Berhasil');
+            redirect('Pss/index', 'refresh');
+        }
+        else {          
+            $this->session->set_flashdata('error', 'Perubahan Form Pedagang Siap Saji Gagal');
+            redirect('Pss/index', 'refresh');
         }
     }
 }

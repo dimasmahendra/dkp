@@ -145,8 +145,17 @@
                                 <li><a class="dropdown-item" href="#">Bantuan Bencana</a></li>
 							</ul>
 						</li>
-						<li class="nav-item <?php if ($this->uri->segment(1) == 'Kontak'){echo "active";}?>">
-							<a class="nav-link" href="<?php echo base_url(); ?>Kontak/reportpss">Kontak Kami</a>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true"
+							    aria-expanded="false">
+								Kontak Kami
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+								<a class="dropdown-item" href="#"></a>
+								<a class="dropdown-item" href="<?php echo base_url(); ?>Kontak/index">Kontak Bisnis (PIRT)</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="<?php echo base_url(); ?>Kontak/reportpss">Kontak Bisnis (Pedagang Siap Saji)</a>
+							</div>
 						</li>
                     </ul>
                 </div>

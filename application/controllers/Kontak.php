@@ -12,10 +12,13 @@ class Kontak extends CI_Controller {
 
     public function index()
     {
-    	$result['data'] = $this->Home_model->Header_source();        
-        $this->load->view('viewHeader', $result);  
-        $this->load->view('kontak/viewKontakKami');  
-        $this->load->view('viewFooter');
+    	$result['data'] = $this->Home_model->Header_source();
+        $result['login_modal'] = $this->load->view('modal/loginModal', '', TRUE);
+        $hasil['footer_src'] = $this->load->view('footer/footer_script', '', TRUE);
+        $data['report'] = $this->Layanan_model->getKontak();
+        $this->load->view('viewHeader', $result);
+        $this->load->view('kontak/viewKontakPIRT', $data);  
+        $this->load->view('viewFooter', $hasil);
     }
 
     public function reportpss()
