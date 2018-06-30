@@ -1,4 +1,5 @@
     <script src="<?= base_url('asset_admin/plugins/jquery/jquery.min.js') ?>" rel="stylesheet"></script>
+    <script src="<?= base_url('asset_admin/js/dkp.js') ?>" rel="stylesheet"></script>
     <!-- Bootstrap Core Js -->
     <script src="<?= base_url('asset_admin/plugins/bootstrap/js/bootstrap.js') ?>" rel="stylesheet"></script>
     <!-- Data Tables -->
@@ -7,6 +8,12 @@
     <script src="<?= base_url('asset_admin/plugins/jquery-slimscroll/jquery.slimscroll.js') ?>" rel="stylesheet"></script>
     <!-- Waves Effect Plugin Js -->
     <script src="<?= base_url('asset_admin/plugins/node-waves/waves.js') ?>" rel="stylesheet"></script>
+    <!-- JQUERY VALIDATE -->
+    <script src="<?= base_url('asset_admin/plugins/jquery-validation/jquery.validate.js') ?>" rel="stylesheet"></script>
+    <!-- Momment JS -->
+    <script src="<?= base_url('asset_admin/js/moment-with-locales.js') ?>" rel="stylesheet"></script>
+    <!-- Date Time Picker -->
+    <script src="<?= base_url('asset_admin/js/bootstrap-datetimepicker-with-locales.js') ?>" rel="stylesheet"></script>
     <!-- Custom Js -->
     <script src="<?= base_url('asset_admin/js/admin.js') ?>" rel="stylesheet"></script>
 

@@ -14,5 +14,19 @@ Class Admin_model extends CI_Model
         $data = $q->row();
         return $data;
     }
+
+    function updatePassword($id, $password)
+    {
+        $this->db->where('id', $id);
+        $update = $this->db->update('user', array('password' => $password));
+        if ($update == '1') 
+        {
+            return TRUE;
+        } 
+        else 
+        {
+            return FALSE;
+        }
+    }
 }
 ?>

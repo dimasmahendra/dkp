@@ -1,6 +1,6 @@
 <?php 
-if (isset($edit_pemohon)) {
-    echo $edit_pemohon;
+if (isset($edit_pirt)) {
+    echo $edit_pirt;
 }
 if (isset($edit_verifikasi)) {
     echo $edit_verifikasi;
@@ -10,12 +10,49 @@ if (isset($edit_verifikasi)) {
 <section class="content">
     <div class="container-fluid">
         <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>
+                            Export PIRT
+                        </h2>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <form action="<?php echo base_url(); ?>Cetak/exportPirt" enctype="multipart/form-data" method="post">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label>Tanggal Awal</label>
+                                            <input class="form-control" type="text" id="tanggal_awal" name="tanggal_awal" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label>Tanggal Akhir</label>
+                                            <input class="form-control" type="text" id="tanggal_akhir" name="tanggal_akhir" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <button type="submit" class="btn bg-primary waves-effect">
+                                        <i class="material-icons">import_export</i>
+                                        <span style="color:#fff;">Export</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="card">
                     <div class="header">
                         <div class="row clearfix">
                             <div class="col-xs-12 col-sm-12">
-                                <h2>Daftar Pemohonan PIRT</h2>
+                                <h2>Daftar Pemohon PIRT</h2>
                             </div>
                         </div>
                     </div>
@@ -48,7 +85,7 @@ if (isset($edit_verifikasi)) {
                                         <td><?php echo $row['kodeproduksi']; ?></td>
                                         <td><?php echo $row['status']; ?></td>
                                         <td>
-                                            <a class="edit-pemohon" href="#" data-toggle="modal" data-target="#editPemohon"
+                                            <a class="edit-pemohon" href="#" data-toggle="modal" data-target="#editPIRT"
                                                 data-no_pirt = "<?php echo $row['no_pirt']; ?>"
                                                 data-id_pemohon = "<?php echo $row['id']; ?>"
                                                 data-id_user = "<?php echo $row['id_user']; ?>"
@@ -74,14 +111,10 @@ if (isset($edit_verifikasi)) {
                                                 data-tahunberdiri = "<?php echo $row['tahunberdiri']; ?>"
                                                 data-komposisi = "<?php echo $row['komposisi']; ?>"
                                                 data-masaberlaku = "<?php echo $row['masaberlaku']; ?>"
+                                                data-status = "<?php echo $row['status']; ?>"
                                             >
                                                 <button type="button" class="btn btn-success waves-effect">
                                                     <i class="material-icons">edit</i>
-                                                </button>
-                                            </a>
-                                            <a href="<?php echo base_url(); ?>Cetak/printPirt/<?php echo $row['id'];?>">
-                                                <button type="button" class="btn bg-blue waves-effect">
-                                                    <i class="material-icons">print</i>
                                                 </button>
                                             </a>
                                         </td>
@@ -91,7 +124,7 @@ if (isset($edit_verifikasi)) {
                         </table>
                     </div>
                 </div>
-            </div>
+            </div>            
         </div>
     </div>
 </section>

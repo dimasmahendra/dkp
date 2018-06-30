@@ -7,9 +7,9 @@ Class Cetak_model extends CI_Model
         parent::__construct();
     }
 
-    function getCetakPIRT($user_id)
+    function getCetakPIRT($id)
     {
-        $this->db->where('id_user', $user_id);  
+        $this->db->where('id', $id);  
         $q = $this->db->get('pemohon_pirt');
         $data = $q->result_array();
 
@@ -25,6 +25,15 @@ Class Cetak_model extends CI_Model
             $value['kemasan'] = $hasil;
         }        
         $data = $value;
+        return $data;
+    }
+
+    function getExportPIRT($insert)
+    {
+        $this->db->where('updated_at >=', $insert['tanggal_awal']);
+        $this->db->where('updated_at <=', $insert['tanggal_akhir']);
+        $q = $this->db->get('pemohon_pirt');
+        $data = $q->result_array();
         return $data;
     }
 }

@@ -4,14 +4,6 @@ $('#tanggal_lahir').datetimepicker({
 	formatDate:'dd-mm-yy'
 }); 
 
-function yesnoCheck(that) {
-    if (that.value == "Lain - Lain") {
-        document.getElementById("ifYes").style.display = "block";
-    } else {
-        document.getElementById("ifYes").style.display = "none";
-    }
-}
-
 $( document ).ready( function () {
     $( '.dropdown-menu a.dropdown-toggle' ).on( 'click', function ( e ) {
         var $el = $( this );

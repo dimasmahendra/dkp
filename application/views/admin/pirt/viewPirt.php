@@ -15,7 +15,7 @@
                                     <div class="col-sm-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="namalengkap" id="namalengkap" required>
+                                                <input type="text" class="form-control" name="namalengkap" id="namalengkap" value="<?php echo $pirt['namalengkap']; ?>" required>
                                                 <label class="form-label">Nama Lengkap (Sesuai KTP) *</label>
                                             </div>
                                         </div>
@@ -23,7 +23,7 @@
                                     <div class="col-sm-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="alamat" id="alamat" required>
+                                                <input type="text" class="form-control" name="alamat" id="alamat" value="<?php echo $pirt['alamat']; ?>" required>
                                                 <label class="form-label">Alamat (Sesuai KTP) *</label>
                                             </div>
                                         </div>
@@ -31,7 +31,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="telepon_rumah" required>
+                                                <input type="text" class="form-control" name="telepon_rumah" value="<?php echo $pirt['telepon_rumah']; ?>" required>
                                                 <label class="form-label">Nomor Telepon Rumah *</label>
                                             </div>
                                         </div>
@@ -39,7 +39,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="telepon_hp" required>
+                                                <input type="text" class="form-control" name="telepon_hp" value="<?php echo $pirt['telepon_hp']; ?>" required>
                                                 <label class="form-label">Nomor Telepon HP *</label>
                                             </div>
                                         </div>
@@ -51,7 +51,7 @@
                                     <div class="col-sm-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="namaperusahaan" id="namaperusahaan" required>
+                                                <input type="text" class="form-control" name="namaperusahaan" id="namaperusahaan" value="<?php echo $pirt['namaperusahaan']; ?>" required>
                                                 <label class="form-label">Nama Perusahaan *</label>
                                             </div>
                                         </div>
@@ -59,7 +59,7 @@
                                     <div class="col-sm-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="alamatperusahaan" id="alamatperusahaan" required>
+                                                <input type="text" class="form-control" name="alamatperusahaan" id="alamatperusahaan" value="<?php echo $pirt['alamatperusahaan']; ?>" required>
                                                 <label class="form-label">Alamat Perusahaan *</label>
                                             </div>
                                         </div>
@@ -67,7 +67,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="kodepos" id="kodepos" required>
+                                                <input type="text" class="form-control" name="kodepos" id="kodepos" value="<?php echo $pirt['kodepos']; ?>" required>
                                                 <label class="form-label">Kodepos *</label>
                                             </div>
                                         </div>
@@ -75,7 +75,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="telepon_kantor" id="telepon_kantor" required>
+                                                <input type="text" class="form-control" name="telepon_kantor" id="telepon_kantor" value="<?php echo $pirt['telepon_kantor']; ?>" required>
                                                 <label class="form-label">Nomor Telepon Kantor *</label>
                                             </div>
                                         </div>
@@ -83,7 +83,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="bulanberdiri" id="bulanberdiri" required>
+                                                <input type="text" class="form-control" name="bulanberdiri" id="bulanberdiri" value="<?php echo $pirt['bulanberdiri']; ?>" required>
                                                 <label class="form-label">Bulan Berdiri Perusahaan *</label>
                                             </div>
                                         </div>
@@ -91,7 +91,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="tahunberdiri" id="tahunberdiri" required>
+                                                <input type="text" class="form-control" name="tahunberdiri" id="tahunberdiri" value="<?php echo $pirt['tahunberdiri']; ?>" required>
                                                 <label class="form-label">Tahun Beridiri Perusahaan *</label>
                                             </div>
                                         </div>

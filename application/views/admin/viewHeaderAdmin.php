@@ -11,6 +11,7 @@
     <link href="<?= base_url('asset_admin/plugins/bootstrap/css/bootstrap.css') ?>" rel="stylesheet">
     <link href="<?= base_url('asset_admin/plugins/node-waves/waves.css') ?>" rel="stylesheet">
     <link href="<?= base_url('asset_admin/plugins/animate-css/animate.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('asset_admin/css/bootstrap-datetimepicker-with-locales.css') ?>" rel="stylesheet">
     <link href="<?= base_url('asset_admin/css/style.css') ?>" rel="stylesheet">
     <link href="<?= base_url('asset_admin/css/themes/all-themes.css') ?>" rel="stylesheet">
     <link href="<?= base_url('asset_admin/css/jquery.dataTables.min.css') ?>" rel="stylesheet">
@@ -82,7 +83,7 @@
                     <?php } else { ?> 
                         <ul class="ml-menu">
                             <?php foreach ($value['menuchild'] as $index => $val) { ?>
-                                <li class="<?php if ($this->uri->segment(1) == $val['urlci']){echo "active";}?>">
+                                <li class="<?php if (($this->uri->segment(1) == $value['urlci']) && ($this->uri->segment(2) == $val['urlci'])){echo "active";}?>">
                                     <a href="<?php echo base_url().$value['urlci'].'/'.$val['urlci']; ?>"><?php echo $val['nmmenu']; ?></a>
                                 </li>
                             <?php } ?>
@@ -90,6 +91,12 @@
                     </li>
                     <?php } ?>
                     <?php } ?>
+                    <li class="<?php if ($this->uri->segment(1) == 'Setting'){echo "active";}?>">
+                        <a href="<?= base_url('Setting/index') ?>">
+                            <i class="material-icons">settings</i>
+                            <span>Setting</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="legal">

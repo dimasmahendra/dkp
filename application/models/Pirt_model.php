@@ -44,5 +44,74 @@ Class Pirt_model extends CI_Model
         $data = $q->result_array();
         return $data;
     }
+
+    function editPermohonan($insert, $id)
+    {
+        $this->db->where('id', $id);
+        $update = $this->db->update('pemohon_pirt', $insert);
+        if ($update == '1') 
+        {
+            return TRUE;
+        } 
+        else 
+        {
+            return FALSE;
+        }
+    }
+
+    function getLastInput($id)
+    {
+        $this->db->where('id_user', $id);
+        $this->db->order_by('updated_at', 'desc');
+        $this->db->limit('1');
+        $q = $this->db->get('pemohon_pirt');
+        $data = $q->result_array();
+        if (empty($data)) {
+            $table = $this->db->list_fields('pemohon_pirt');
+            $data = array();
+            foreach ($table as $key => $value) {
+                $data[$value] = "";
+            }
+            return $data;
+        }
+        else {
+            return $data[0];
+        }
+    }
+
+    function ubahVerifikasi($insert, $id)
+    {
+        $this->db->where('id', $id);
+        $update = $this->db->update('pemohon_pirt', $insert);
+        if ($update == '1') 
+        {
+            return TRUE;
+        } 
+        else 
+        {
+            return FALSE;
+        }
+    }   
+
+    function getPemohonAll()
+    {
+        $q = $this->db->get('pemohon_pirt');
+        $data = $q->result_array();
+        return $data;
+    }
+
+    function ubahStatus($insert, $id)
+    {
+        $this->db->where('id', $id);
+        $update = $this->db->update('pemohon_pirt', $insert);
+        if ($update == '1') 
+        {
+            return TRUE;
+        } 
+        else 
+        {
+            return FALSE;
+        }
+    } 
 }
 ?>

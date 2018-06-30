@@ -59,9 +59,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="<?php echo base_url(); ?>">Home
-								<span class="sr-only">(current)</span>
+                        <li class="nav-item <?php if ($this->uri->segment(1) == ''){echo "active";}?>">
+                            <a class="nav-link" href="<?php echo base_url(); ?>">
+                            	Home<span class="sr-only">(current)</span>
 							</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -144,6 +144,9 @@
                                 <div class="dropdown-divider"></div>
                                 <li><a class="dropdown-item" href="#">Bantuan Bencana</a></li>
 							</ul>
+						</li>
+						<li class="nav-item <?php if ($this->uri->segment(1) == 'Kontak'){echo "active";}?>">
+							<a class="nav-link" href="<?php echo base_url(); ?>Kontak/reportpss">Kontak Kami</a>
 						</li>
                     </ul>
                 </div>

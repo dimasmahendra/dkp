@@ -17,7 +17,23 @@
             $("input[name=hasil_pengisian][value=" + hasil + "]").prop('checked', true);
             $("input[name=status_pengisian][value=" + status + "]").prop('checked', true);
         }
-    else{
-        alert('Data tidak ditemukan !!!');
-    }
-});
+        else{
+            alert('Data tidak ditemukan !!!');
+        }
+    });
+
+    jQuery('.validatedForm').validate({
+            rules : {
+                password_pengguna : {
+                    minlength : 5
+                },
+                password_pengguna_confirm : {
+                    minlength : 5,
+                    equalTo : "#password_pengguna"
+                }
+            }
+        });
+
+        jQuery.extend(jQuery.validator.messages, {
+            equalTo: "Password yang anda masukkan tidak sama."
+        });
