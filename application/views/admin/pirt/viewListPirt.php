@@ -68,6 +68,7 @@ if (isset($edit_verifikasi)) {
                                     <th>Berat Bersih</th>
                                     <th>Kode Porduksi</th>
                                     <th>Status</th>
+                                    <th>Validasi</th>
                                     <th>Edit</th>
                                 </tr>
                             </thead>
@@ -84,6 +85,14 @@ if (isset($edit_verifikasi)) {
                                         <td><?php echo $row['beratbersih']; ?></td>
                                         <td><?php echo $row['kodeproduksi']; ?></td>
                                         <td><?php echo $row['status']; ?></td>
+                                        <td><?php 
+                                            if (empty($row['no_pirt'])) {
+                                                echo "Belum Di Validasi";
+                                            }
+                                            else {
+                                                echo "Sudah Di Validasi";
+                                            }
+                                        ?></td>
                                         <td>
                                             <a class="edit-pemohon" href="#" data-toggle="modal" data-target="#editPIRT"
                                                 data-no_pirt = "<?php echo $row['no_pirt']; ?>"

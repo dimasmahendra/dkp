@@ -71,17 +71,17 @@
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
 								<a class="dropdown-item" href="#"></a>
-								<a class="dropdown-item" href="#">Sekapur Sirih</a>
+								<a class="dropdown-item" href="<?php echo base_url(); ?>Tentangkami_Home/sekapursirih">Sekapur Sirih</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Visi Misi</a>
+								<a class="dropdown-item" href="<?php echo base_url(); ?>Tentangkami_Home/visimisi">Visi Misi</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Profile DKP</a>
+								<a class="dropdown-item" href="<?php echo base_url(); ?>Tentangkami_Home/profiledkp">Profile DKP</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Tupoksi DKP</a>
+								<a class="dropdown-item" href="<?php echo base_url(); ?>Tentangkami_Home/tupoksidkp">Tupoksi DKP</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Struktur Organisasi</a>
+								<a class="dropdown-item" href="<?php echo base_url(); ?>Tentangkami_Home/strukturorganisasi">Struktur Organisasi</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Data Pegawai</a>
+								<a class="dropdown-item" href="<?php echo base_url(); ?>Tentangkami_Home/datapegawai">Data Pegawai</a>
 							</div>
 						</li>
                         <li class="nav-item dropdown">
@@ -91,9 +91,7 @@
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
 								<a class="dropdown-item" href="#"></a>
-								<a class="dropdown-item" href="#">Kalendar Event</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Tampil Di Beranda</a>
+								<a class="dropdown-item" href="<?php echo base_url(); ?>Agenda/index">Kalendar Event</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#">Resep Pangan Lokal</a>
 								<div class="dropdown-divider"></div>
@@ -108,41 +106,80 @@
 								PEDAFTARAN USAHA PANGAN
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item dropdown-toggle" href="#">Sertifikat Prima Tiga</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Alur Permohonan Sertifikat Prima Tiga</a></li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a class="dropdown-item" href="#">Syarat Permohonan Sertifikat Prima Tiga</a></li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a class="dropdown-item" href="#">Permohonan Sertifikat Prima Tiga</a></li>
-                                    </ul>
+                                <li><a class="dropdown-item" href="#">PSAT</a></li>
+                                <div class="dropdown-divider"></div>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Pangan Olahan</a>
+                                	<ul class="dropdown-menu">
+                                		<li><a class="dropdown-item dropdown-toggle" href="#">PIRT</a>
+		                                    <ul class="dropdown-menu">
+		                                        <li><a class="dropdown-item" href="<?php echo base_url(); ?>Layanan/alurPermohonanPIRT">ALUR PERMOHONAN SPP-PIRT</a></li>
+		                                        <div class="dropdown-divider"></div>
+		                                        <li><a class="dropdown-item" href="<?php echo base_url(); ?>Layanan/syaratPermohonanPIRT">SYARAT PERMOHONAN SPP – PIRT</a></li>
+		                                        <div class="dropdown-divider"></div>
+		                                        <li><a class="dropdown-item" href="<?php echo base_url(); ?>Register/index">PERMOHONAN SPP-PIRT</a></li>
+		                                    </ul>
+		                                </li>
+		                                <div class="dropdown-divider"></div>
+		                                <li><a class="dropdown-item dropdown-toggle" href="#">MD / ML</a>
+		                                    <ul class="dropdown-menu">
+		                                        <li><a class="dropdown-item" href="#">BPOM</a></li>
+		                                        <div class="dropdown-divider"></div>
+		                                        <li><a class="dropdown-item" href="#">MUI</a></li>
+		                                    </ul>
+		                                </li>
+                                	</ul>
                                 </li>
                                 <div class="dropdown-divider"></div>
-                                <li><a class="dropdown-item dropdown-toggle" href="#">PIRT</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="<?php echo base_url(); ?>Layanan/alurPermohonanPIRT">ALUR PERMOHONAN SPP-PIRT</a></li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a class="dropdown-item" href="<?php echo base_url(); ?>Layanan/syaratPermohonanPIRT">SYARAT PERMOHONAN SPP – PIRT</a></li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a class="dropdown-item" href="<?php echo base_url(); ?>Register/index">PERMOHONAN SPP-PIRT</a></li>
-                                    </ul>
-                                </li>
-                                <div class="dropdown-divider"></div>
-                                <li><a class="dropdown-item dropdown-toggle" href="#">Pedagang Siap Saji</a>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Pangan Siap Saji</a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="<?php echo base_url(); ?>Layanan/formpss">Form Pedagang Siap Saji</a></li>
                                         <div class="dropdown-divider"></div>
                                         <li><a class="dropdown-item" href="<?php echo base_url(); ?>Layanan/reportpss">Report Pedagang Siap Saji</a></li>
                                     </ul>
                                 </li>
-                                <div class="dropdown-divider"></div>
-                                <li><a class="dropdown-item" href="#">PD PSAT</a></li>
-                                <div class="dropdown-divider"></div>
-                                <li><a class="dropdown-item" href="#">MD / ML</a></li>
-                                <div class="dropdown-divider"></div>
-                                <li><a class="dropdown-item" href="#">Sertifikasi Halal</a></li>
-                                <div class="dropdown-divider"></div>
-                                <li><a class="dropdown-item" href="#">Bantuan Bencana</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
+							    aria-expanded="false">
+								PPID
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item dropdown-toggle" href="#">Dasar Hukum</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="<?php echo base_url(); ?>Ppid/dasarHukumPerwal">Perwal No. 35 Tahun 2017</a></li>
+										<div class="dropdown-divider"></div>
+										<li><a class="dropdown-item" href="<?php echo base_url(); ?>Ppid/skdip">SK DIP</a></li>
+									</ul>
+								</li>
+								<div class="dropdown-divider"></div>
+								<li><a class="dropdown-item dropdown-toggle" href="#">Daftar Informasi Publik</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="<?php echo base_url(); ?>Ppid/informasiberkala">Informasi Berkala</a></li>
+										<div class="dropdown-divider"></div>
+										<li><a class="dropdown-item" href="<?php echo base_url(); ?>Ppid/informasisetiapsaat">Informasi Setiap Saat</a></li>
+										<div class="dropdown-divider"></div>
+										<li><a class="dropdown-item" href="<?php echo base_url(); ?>Ppid/informasisertamerta">Informasi Serta Merta</a></li>
+									</ul>
+								</li>
+								<div class="dropdown-divider"></div>
+								<li><a class="dropdown-item dropdown-toggle" href="#">Profil PPID</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="<?php echo base_url(); ?>Ppid/skpidpembantu">SK PPID Pembantu</a></li>
+										<div class="dropdown-divider"></div>
+										<li><a class="dropdown-item" href="<?php echo base_url(); ?>Ppid/strukturppidpembantu">Struktur PPID Pembantu</a></li>
+									</ul>
+								</li>
+								<div class="dropdown-divider"></div>
+								<li><a class="dropdown-item dropdown-toggle" href="#">Layanan Informasi</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="<?php echo base_url(); ?>Ppid/index">Permohonan Informasi</a></li>
+										<div class="dropdown-divider"></div>
+										<li><a class="dropdown-item" href="<?php echo base_url(); ?>Ppid/soppermohonaninformasi">SOP Permohonan Informasi</a></li>
+										<div class="dropdown-divider"></div>
+										<li><a class="dropdown-item" href="<?php echo base_url(); ?>Ppid/soppenanganankeberatan">SOP Permohonan Keberatan</a></li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 						<li class="nav-item dropdown">
@@ -157,6 +194,9 @@
 								<a class="dropdown-item" href="<?php echo base_url(); ?>Kontak/reportpss">Kontak Bisnis (Pedagang Siap Saji)</a>
 							</div>
 						</li>
+						<li class="nav-item">
+                            <a class="nav-link" href="">Berita</a>
+                        </li>
                     </ul>
                 </div>
             </nav>

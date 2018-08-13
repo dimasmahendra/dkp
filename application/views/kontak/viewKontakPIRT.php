@@ -16,7 +16,10 @@
 												<a href="#"><?php echo $value['merk']; ?></a>
 											</h5>
 											<p class="card-text mb-3">
-												Berat Bersih : <?php echo $value['beratbersih']; ?>
+												Nama Perusahaan : <?php echo $value['namaperusahaan']; ?> <br>
+												Nama Dagang : <?php echo $value['namadagang']; ?> <br>
+												Alamat Perusahaan : <?php echo $value['alamatperusahaan']; ?> <br>
+												Telepon : <?php echo $value['telepon_kantor']; ?>
 											</p>
 											<!-- <a href="#" class="btn btn-primary read-m">Read More</a> -->
 										</div>

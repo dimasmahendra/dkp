@@ -26,9 +26,16 @@ $('.edit-pemohon').click(function(){
     var komposisi = $(this).data('komposisi');
     var status = $(this).data('status');
     if (id_pemohon) {
+        if (no_pirt) {
+            $( ".edit-validasi" ).show();    
+        }
+        else {
+            $( ".edit-validasi" ).hide();       
+        }
         $('#no_pirt').val(no_pirt);
         $('#masaberlaku').val(masaberlaku);
         $('#id_pemohon').val(id_pemohon);
+        $('#id_pemohons').val(id_pemohon);
         $('#id_user').val(id_user);
         $('#nama_pemohon').val(namalengkap);
         $('#alamat_pemohon').val(alamat);            

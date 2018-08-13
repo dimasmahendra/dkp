@@ -116,7 +116,7 @@ class Pirt extends MY_Controller {
     {
         $insert = array(
             'no_pirt'      => $this->input->post('no_pirt'),
-            'status'       => "Sudah Terverifikasi",
+            'status'       => "Disetujui",
             'masaberlaku'  => date("Y-m-d", strtotime($this->input->post('masaberlaku')))
         );
         $result = $this->Pirt_model->ubahVerifikasi($insert, $this->input->post('id_pemohon'));
@@ -152,6 +152,22 @@ class Pirt extends MY_Controller {
             'status' => $this->input->post('status')
         );
         $result = $this->Pirt_model->ubahStatus($insert, $this->input->post('id_pemohon'));
+        if ($result) {
+            $this->session->set_flashdata('message', 'Verifikasi PIRT berhasil');
+            redirect('Pirt/listPirt', 'refresh');
+        }
+        else {          
+            $this->session->set_flashdata('error', 'Verifikasi PIRT Gagal');
+            redirect('Pirt/listPirt', 'refresh');
+        }
+    }
+
+    public function validasiStatus()
+    {
+        $insert = array(
+            'status' => "Sudah Terverifikasi"
+        );
+        $result = $this->Pirt_model->ubahStatus($insert, $this->input->post('id_pemohons'));
         if ($result) {
             $this->session->set_flashdata('message', 'Verifikasi PIRT berhasil');
             redirect('Pirt/listPirt', 'refresh');

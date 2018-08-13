@@ -1,21 +1,44 @@
-<div class="main-content">
-<article>
-	<h4 class="page-title">Struktur Organisasi</h4>
-	<a href="#"><img class="img-responsive" src="#" alt="Post"/></a>
-	<div class="post-content">
-		<p class="post"></p>
-		<p class="post"></p>
-		<p class="post"></p>
-		<blockquote>
-		</blockquote>
-		<p class="post"></p>
-		<p class="post"></p>
-	</div>
-		<h4 class="post-title social-title">connect with me</h4>
-		<div class="social">
-			<li><a href="#"><i class="fa fa-facebook facebook"></i></a></li>
-			<li><a href="#"><i class="fa fa-twitter twitter"></i></a></li>
-			<li><a href="#"><i class="fa fa-google-plus google-plus"></i></a></li>
-		</div>
-</article>
-</div><!-- main-content -->
+<!-- page content -->
+<section class="content">
+    <div class="container-fluid">
+        <?php if($this->session->flashdata('message')){?> 
+		    <div class="alert bg-green">  
+		<?php echo $this->session->flashdata('message')?> 
+		    </div><?php } ?>
+
+		<?php if($this->session->flashdata('error')){?> 
+		    <div class="alert bg-red">
+		<?php echo $this->session->flashdata('error')?> 
+		    </div><?php } ?>
+        <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="header">
+                        <div class="row clearfix">
+                            <div class="col-xs-12 col-sm-12">
+                                <h2>Struktur Organisasi DKP</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body">
+                    	<div class="row clearfix">
+                    	<form id="#" method="POST" action="<?php echo base_url(); ?>TentangKami/simpanstrukturorganisasi">
+                    		<div class="col-sm-12">
+                            	<label class="form-label">Input Struktur Organisasi DKP *</label>
+                            	<textarea class="form-control" rows="20" id="strukturorganisasi" name="strukturorganisasi"><?php echo $retVal = (isset($strukturorganisasi)) ? $strukturorganisasi : "" ; ?></textarea>
+                        	</div>
+                        	<div class="col-sm-12">
+                            	<div class="pull-right">
+                            		<button class="btn btn-primary waves-effect" type="submit">SIMPAN</button>
+        							<button class="btn btn-success waves-effect" id="tombolReset" type="reset">RESET</button>
+                            	</div>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /page content -->

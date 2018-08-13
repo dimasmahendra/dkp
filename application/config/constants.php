@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 define('URL_IMG', 'http://localhost/dkp/upload');
+define('URL_FILE', 'http://localhost/dkp/upload');
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace
